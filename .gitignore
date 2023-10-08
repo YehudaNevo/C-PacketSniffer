@@ -1,8 +1,22 @@
+# C-related ignores
+*.o
+*.out
+*.a
+*.so
+*.exe
+
+# Docker-related ignores
+.dockerignore
+
+# Editor-related
+*.swp
+*.swo
+.DS_Store
+
 # Prerequisites
 *.d
 
 # Object files
-*.o
 *.ko
 *.obj
 *.elf
@@ -18,19 +32,15 @@
 
 # Libraries
 *.lib
-*.a
 *.la
 *.lo
 
 # Shared objects (inc. Windows DLLs)
 *.dll
-*.so
 *.so.*
 *.dylib
 
 # Executables
-*.exe
-*.out
 *.app
 *.i*86
 *.x86_64
