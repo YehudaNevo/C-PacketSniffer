@@ -1,0 +1,10 @@
+# Dockerfile.base
+
+# Use Ubuntu as the base image
+FROM ubuntu:latest
+
+# Update package lists and install GCC (GNU Compiler Collection)
+RUN apt-get update && apt-get install -y gcc
+
+# Set the working directory to /app
+WORKDIR /app

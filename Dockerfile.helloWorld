@@ -1,0 +1,13 @@
+# Dockerfile.helloworld
+
+# Use the "my-c-compiler" image as the base
+FROM my-c-compiler:1.0
+
+# Copy your C file to the /app directory in the container
+COPY helloworld.c /app/
+
+# Compile the C file using GCC
+RUN gcc -o helloworld helloworld.c
+
+# Run the compiled C program
+CMD ["./helloworld"]
