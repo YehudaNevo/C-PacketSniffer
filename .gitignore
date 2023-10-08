@@ -5,6 +5,8 @@
 *.so
 *.exe
 
+private/
+
 # Docker-related ignores
 .dockerignore
 
