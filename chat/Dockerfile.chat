@@ -3,8 +3,11 @@
 # Use the "my-c-compiler" image as the base
 FROM my-c-compiler:1.0
 
+# Set the working directory to /app
+WORKDIR /app/chat
+
 # Copy your C file to the /app directory in the container
-COPY helloworld.c /app/
+COPY helloworld.c .
 
 # Compile the C file using GCC
 RUN gcc -o helloworld helloworld.c
