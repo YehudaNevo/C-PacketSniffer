@@ -82,4 +82,3 @@
 
 ---
 
-Feel free to adapt or expand this README file as your project grows. Let me know if this meets your requirements.

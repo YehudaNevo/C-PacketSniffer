@@ -16,4 +16,5 @@ void insertToTable(const HashTable* ht,int key,int value);
 void removeFromTable(const HashTable* ht, int key);
 void deallocateTable(HashTable* ht);
 void displayTable(const HashTable* ht);
+
 #endif //CHAT_HASHTABLE_H
