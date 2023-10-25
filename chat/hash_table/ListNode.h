@@ -9,6 +9,7 @@ typedef struct ClientInfo{
     uint16_t client_port;
 } ClientInfo;
 
+
 typedef struct ListNode {
     int key;
     struct ClientInfo* info;
@@ -16,13 +17,7 @@ typedef struct ListNode {
     struct ListNode* prev;
 } ListNode;
 
-
-ListNode* allocateList();
-void insertItemToList(ListNode* head, int key,ClientInfo* info );
-void removeItemFromList(ListNode* head);
-void deallocateList(ListNode* head);
-ListNode* search(const ListNode* head,int key);
-void displayList(ListNode* list);
+void deleteItem(ListNode* node);
 void displayNode(const ListNode* node);
 
 #endif //CHAT_LINKEDLIST_H
