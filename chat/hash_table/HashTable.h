@@ -12,8 +12,8 @@ typedef struct {
 HashTable* initializeTable();
 int hash(int key);
 int get(HashTable* ht, int  key);
-void insertToTable(const HashTable* ht,int key,int value);
-void removeFromTable(const HashTable* ht, int key);
+void insertToTable(HashTable* ht,int key,int value);
+void removeFromTable(HashTable* ht, int key);
 void deallocateTable(HashTable* ht);
 void displayTable(const HashTable* ht);
 

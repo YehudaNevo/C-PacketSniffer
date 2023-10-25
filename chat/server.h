@@ -2,6 +2,8 @@
 #define SERVER_H
 
 #include <stdint.h>
+#include <netinet/in.h>
+
 
 // Constants
 #define SERVER_IP "127.0.0.1"
@@ -26,9 +28,7 @@ int socket_create(int port);
 
 /* Client Management Module */
 // Add a new client and assign a unique ID.
-int client_add(int client_socket, ClientInfo *client_info);
-
-// Remove a disconnected client.
+int client_add(int client_socket, struct sockaddr_in *client_addr);
 void client_remove(int client_id);
 
 // Retrieve details of all connected clients.
