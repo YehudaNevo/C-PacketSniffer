@@ -14,16 +14,20 @@ int get(HashTable* ht, int key){
     int index = hash(key);
     ListNode* tmp;
     if((tmp= search(ht->hashTable[index],key))!=NULL)
-        return tmp->fd;
+        return tmp->info->socket_fd;
     return -1;
 }
 
 int hash(const int value){ return value%TABLE_SIZE;}
 
-void insertToTable( HashTable* ht, const int key,const int value){
+void insertToTable( HashTable* ht, int key,int* fd,char* ip,uint16_t* client_port){
     int index = hash(key);
     if(search(ht->hashTable[index],key)==NULL) {
-        insertItemToList(ht->hashTable[index], key, value);
+        ClientInfo* info = (ClientInfo *)malloc(sizeof(ClientInfo));
+        info->socket_fd =*fd;
+        info->client_ip = ip;
+        info->client_port = *client_port;
+        insertItemToList(ht->hashTable[index], key, info);
         ht->count++;
     }
 }

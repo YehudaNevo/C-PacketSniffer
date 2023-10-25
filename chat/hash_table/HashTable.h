@@ -12,7 +12,7 @@ typedef struct {
 HashTable* initializeTable();
 int hash(int key);
 int get(HashTable* ht, int  key);
-void insertToTable(HashTable* ht,int key,int value);
+void insertToTable(HashTable* ht,int key,int* fd,char* ip,uint16_t* client_port );
 void removeFromTable(HashTable* ht, int key);
 void deallocateTable(HashTable* ht);
 void displayTable(const HashTable* ht);
